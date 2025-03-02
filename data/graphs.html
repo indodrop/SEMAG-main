@@ -1,0 +1,62 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var tetris1 = 10;
+	var tetris2 = 15;
+	var tetris3 = 25;
+	var tetris4 = 30;
+	var tetris5 = 28;
+	var chart = new CanvasJS.Chart("chartContainer", {
+		title:{
+			text: "My First Chart in CanvasJS"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "apple",  y: tetris1  },
+				{ label: "orange", y: tetris2  },
+				{ label: "banana", y: tetris3  },
+				{ label: "mango",  y: tetris4  },
+				{ label: "grape",  y: tetris5  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+window.onload = function () {
+	function addData(gameName){
+		if gameName == ("tetris1"){
+			tetris1 ++;
+		}
+		if gameName == ("tetris2"){
+			tetris2 ++;
+		}
+		if gameName == ("tetris3"){
+			tetris3 ++;
+		}
+		if gameName == ("tetris4"){
+			tetris4 ++;
+		}
+		if gameName == ("tetris5"){
+			tetris5 ++;
+		}
+	}
+}
+</script>
+<script type="text/javascript">window.onload = function () {addData("tetris1")}</script>
